@@ -102,6 +102,7 @@ pub struct PanOrbitCameraSystemSet;
 /// ```
 #[derive(Component, Reflect, Copy, Clone, Debug, PartialEq)]
 #[require(Camera3d)]
+#[reflect(Component)]
 pub struct PanOrbitCamera {
     /// The point to orbit around, and what the camera looks at. Updated automatically.
     /// If you want to change the focus programmatically after initialization, set `target_focus`
