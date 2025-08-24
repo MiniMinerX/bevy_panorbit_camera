@@ -1,8 +1,8 @@
 [package]
 name = "bevy_panorbit_camera"
-version = "0.28.0"
+version = "0.29.0"
 authors = ["Plonq"]
-edition = "2021"
+edition = "2024"
 description = "A basic pan and orbit camera in Bevy"
 keywords = ["gamedev", "bevy", "orbit", "camera"]
 categories = ["game-development"]
@@ -15,17 +15,17 @@ readme = "README.md"
 bevy_egui = ["dep:bevy_egui"]
 
 [dependencies]
-bevy = { version = "0.16.1", default-features = false, features = [
+bevy = { version = "0.17.0-dev", git = "https://github.com/bevyengine/bevy.git",  default-features = false, features = [
     "bevy_core_pipeline",
     "bevy_render",
     "bevy_window",
 ] }
-bevy_egui = { version = "0.36", optional = true, default-features = false }
+bevy_egui = {git = "https://github.com/MiniMinerX/bevy_egui", branch = "dev-0.17", optional = true, default-features = false }
 
 [dev-dependencies]
-bevy = { version = "0.16.1" }
+bevy = { version = "0.17.0-dev", git = "https://github.com/bevyengine/bevy.git"}
 float-cmp = "0.10.0"
-bevy_egui = { version = "0.36", default-features = false, features = [
+bevy_egui = {git = "https://github.com/MiniMinerX/bevy_egui", branch = "dev-0.17", default-features = false, features = [
     "render",
     "default_fonts",
 ] }
